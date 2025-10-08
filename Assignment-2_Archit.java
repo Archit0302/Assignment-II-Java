@@ -24,7 +24,7 @@ class Calculator {
 
     public double divide(int a, int b) {
         if (b == 0) {
-            throw new ArithmeticException("Error: Division by zero is not allowed!");
+            System.out.println("error");
         }
         return (double) a / b;
     }
@@ -94,16 +94,12 @@ class Interface {
 
     // Method for division
     public void performDivision() {
-        try {
-            System.out.print("Enter numerator (integer): ");
+        System.out.print("Enter numerator (integer): ");
             int a = sc.nextInt();
             System.out.print("Enter denominator (integer): ");
             int b = sc.nextInt();
             double result = calc.divide(a, b);
             System.out.println("Result: " + result);
-        } catch (ArithmeticException e) {
-            System.out.println(e.getMessage());
-        }
     }
 
     // Main menu
