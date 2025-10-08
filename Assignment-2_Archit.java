@@ -35,7 +35,6 @@ class Interface {
     Scanner sc = new Scanner(System.in);
     Calculator calc = new Calculator();
 
-    // Method for addition
     public void performAddition() {
         System.out.println("Choose Addition Type:");
         System.out.println("1. Add two integers");
@@ -92,17 +91,14 @@ class Interface {
         System.out.println("Result: " + calc.multiply(a, b));
     }
 
-    // Method for division
     public void performDivision() {
         System.out.print("Enter numerator (integer): ");
-            int a = sc.nextInt();
-            System.out.print("Enter denominator (integer): ");
-            int b = sc.nextInt();
-            double result = calc.divide(a, b);
-            System.out.println("Result: " + result);
+        int a = sc.nextInt();
+        System.out.print("Enter denominator (integer): ");
+        int b = sc.nextInt();
+        System.out.println("Result: " + calc.divide(a,b));
     }
 
-    // Main menu
     public void mainMenu() {
         int choice;
         do {
@@ -134,7 +130,8 @@ class Interface {
                     System.out.println("Invalid choice! Please try again.");
             }
 
-        } while (choice != 5);
+        } 
+        while (choice != 5);
     }
 
     public static void main(String[] args) {
